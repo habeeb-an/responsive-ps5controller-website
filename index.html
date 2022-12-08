@@ -5,6 +5,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         </head>
            
@@ -13,15 +14,15 @@
                 <div class="navbar">
                     <img src="images/PlayStation-Logo.png" class="logo" alt="logo">
                     <nav>
-                        <ul>
+                        <ul id="menulist">
                             <li><a href="">Game Controller</a></li>
                             <li><a href="">VR Accesories</a></li>
                             <li><a href="">Media Remotes </a></li>
-                            <li><a href="">others </a></li>
+                            <li><a href="">Others </a></li>
                         </ul>
 
                     </nav>
-                    <img src="images/menu.png" class='menu-icon' alt="menu-logo" > 
+                    <img src="images/menu.png" class='menu-icon' alt="menu-logo" onclick="togglemenu()"> 
                 </div>
                 <div class="row">
                     <div class="col-1">
@@ -33,9 +34,37 @@
                     </div>
                     <div class="col-2">
                         <img src="/responsive-website/responsive-ps5controller-website/images/PS5-Controller-PNG-Image.png" alt="Controller" class="controller">
-                    </div>
+                        <div class="color-box"></div>
+                        <div class="add-btn">
+                            <img src="/responsive-website/responsive-ps5controller-website/images/add.png" alt="add to cart">
+                            <p>Add to Cart</p>
+                        </div>
+                  </div>
+                    
                 </div>
+                <div class="social-links">
+                    <i class="fa fa-facebook-f" style="font-size:24px"></i>
+                    <i class="fa fa-instagram" style="font-size:24px"></i>
+                    <i class="fa fa-twitter-square" style="font-size:24px"></i>
+
+
+
             </div>
+            <script>
+            var menulist=document.getElementById('menulist');
+            menulist.style.maxHeight = "0px";
+            function togglemenu(){
+                if(menulist.style.maxHeight== "0px")
+                    {
+                        menulist.style.maxHeight = "130px";
+                    }
+                else
+                {
+                    menulist.style.maxHeight = "0px";
+
+                }
+            }                   
+            </script>
 
 
         </body>
